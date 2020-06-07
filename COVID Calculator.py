@@ -43,7 +43,7 @@ male.place( x = 150, y = 210)
 #Creating the "Health" label and laying out its position on the GUI
 healthLabel = Label(top, text = "Underlying health conditions?", background = 'light blue', font = font)
 healthLabel.place(x = 10, y = 270)
-
+#Assigning health variable
 varHealth = IntVar()
 
 healthNone= Radiobutton(top, text = "None",  value = 4, variable = varHealth, background = 'light blue', font = font)
