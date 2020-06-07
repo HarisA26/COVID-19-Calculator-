@@ -1,37 +1,37 @@
+#Outlining my GUI tab with dimensions and other stylistic features
 import tkinter
 from tkinter import *
 from tkinter import messagebox
 from tkinter.messagebox import showerror
 from tkinter.font import Font
-
+#Importing different features from the library to set-up a GUI
 top = tkinter.Tk("Haris's tab")
 font = Font(family="Helvetica", size = 12)
 alertFont = Font(family="Helvetica", size = 18)
 top.geometry("500x600")
 top.configure(background = 'light blue')
-
-
+#Creating "Welcome" label, font is specified from earlier
 welcomeLabel = Label(top, text = "Welcome to the COVID 19 Risk Calculator", background = 'light blue', font = font)
 welcomeLabel.pack(side = TOP)
-
+#Creating the "Age" label and laying out its position on the GUI
 ageLabel = Label(top, text = "Age", background = 'light blue', font = font)
 ageLabel.place(x=10, y = 90)
-
+#Entry box for user to input age with setout widths and parameters
 ageEntry = Entry(top, bd = 5)
 ageEntry.place(x=90, y = 90)
-
+#Creating the "Ethnicity" label and laying out its position on the GUI
 ethnicityLabel = Label(top, text = "Ethnicity", background = 'light blue', font = font)
 ethnicityLabel.place( x = 10, y =150)
-
+#The ethnicity entry with a dropdown table
 ethnicityEntry = Entry(top, bd = 5)
 ethnicityClick = StringVar()
 ethnicityDrop = OptionMenu(top, ethnicityClick, "White", "Chinese", "Mixed", "Indian",
                   "Bangladeshi", "Pakistani", "Middle Eastern", "Black", "Other")
 ethnicityDrop.place(x = 90, y = 150)
-
+#Creating the "Gender" label and laying out its position on the GUI
 genderLabel = Label(top, text = "Gender", background = 'light blue', font = font)
 genderLabel.place(x = 10, y = 210)
-
+#Assigning gender variable
 varGender = IntVar()
 
 female = Radiobutton(top, text = "Female",  value = 1, variable = varGender, background = 'light blue', font = font)
