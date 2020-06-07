@@ -175,11 +175,11 @@ def calculateScore():
 
     return score
 
-
+#Creating the "Alert" label for end result
 alertLabel = Label(top, text="", background='light blue', font=alertFont)
 alertLabel.place(x=250, y=510)
 
-
+#Function to execute when user presses button 
 def buttonPress():
     age = ageEntry.get()
 
@@ -202,8 +202,8 @@ def buttonPress():
 
 
 
-
+#Creation of "calculate" button
 calculateBtn = Button(top, text = "Calculate", command = buttonPress, font = font)
 calculateBtn.place(x = 220, y = 40)
-
+#Allows program to run GUI
 top.mainloop()
