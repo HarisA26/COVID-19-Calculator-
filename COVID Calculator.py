@@ -49,7 +49,7 @@ varHealth = IntVar()
 #"None" button
 healthNone= Radiobutton(top, text = "None",  value = 4, variable = varHealth, background = 'light blue', font = font)
 healthNone.place( x = 220, y = 270)
-
+#"One" button
 healthOne = Radiobutton(top, text = "One",  value = 1, variable = varHealth, background = 'light blue', font = font)
 healthOne.place( x = 290, y = 270)
 
