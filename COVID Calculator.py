@@ -88,10 +88,10 @@ BMIless23.place( x = 140, y = 390)
 #"23 - 29" button
 BMI23 = Radiobutton(top, text = "23 - 29",  value = 1, variable = varBMI, background = 'light blue', font = font)
 BMI23.place( x = 260, y = 390)
-
+#"30 - 39" button
 BMI30 = Radiobutton(top, text = "30 - 39", value = 2, variable = varBMI, background = 'light blue', font = font)
 BMI30.place( x = 340, y = 390)
-
+#"Over 40" button
 BMI40 = Radiobutton(top, text = "Over 40",  value = 3, variable = varBMI, background = 'light blue', font = font)
 BMI40.place( x = 420, y = 390)
 
