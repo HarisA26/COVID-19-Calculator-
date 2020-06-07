@@ -22,7 +22,7 @@ ageEntry.place(x=90, y = 90)
 #Creating the "Ethnicity" label and laying out its position on the GUI
 ethnicityLabel = Label(top, text = "Ethnicity", background = 'light blue', font = font)
 ethnicityLabel.place( x = 10, y =150)
-#The ethnicity entry with a dropdown table
+#The "Ethnicity" entry with a dropdown table
 ethnicityEntry = Entry(top, bd = 5)
 ethnicityClick = StringVar()
 ethnicityDrop = OptionMenu(top, ethnicityClick, "White", "Chinese", "Mixed", "Indian",
@@ -34,6 +34,7 @@ genderLabel.place(x = 10, y = 210)
 #Assigning gender variable
 varGender = IntVar()
 #Creating the "Gender" buttons and assigning stylistic features
+#"Female" button
 female = Radiobutton(top, text = "Female",  value = 1, variable = varGender, background = 'light blue', font = font)
 female.place( x = 70, y = 210)
 
