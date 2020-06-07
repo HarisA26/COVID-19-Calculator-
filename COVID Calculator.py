@@ -55,7 +55,7 @@ healthOne.place( x = 290, y = 270)
 #"Two" button
 healthTwo = Radiobutton(top, text = "Two",  value = 2, variable = varHealth, background = 'light blue', font = font)
 healthTwo.place( x = 350, y = 270)
-
+#"Three or more" button 
 healthThree = Radiobutton(top, text = "Three or more",  value = 3, variable = varHealth, background = 'light blue',
                           font = font)
 healthThree.place( x = 220, y = 290)
