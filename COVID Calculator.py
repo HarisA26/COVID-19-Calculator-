@@ -65,25 +65,27 @@ pregnancyLabel.place(x = 10, y = 330)
 #Assigning pregnancy variable
 varPregnancy = IntVar()
 #Creating the "Pregancy" buttons and assigning stylistic features
+#"Under 28 weeks" button
 pregnancyUnder = Radiobutton(top, text = "Under 28 Weeks",  value = 1, variable = varPregnancy,
                              background = 'light blue', font = font)
 pregnancyUnder.place( x = 140, y = 330)
-
+#"Over 28 weeks" button
 pregnancyOver = Radiobutton(top, text = "Over 28 Weeks",  value = 2, variable = varPregnancy, background = 'light blue',
                             font = font)
 pregnancyOver.place( x = 290, y = 330)
-
+#"No" button
 pregnancyNo = Radiobutton(top, text = "No",  value = 3, variable = varPregnancy, background = 'light blue', font = font)
 pregnancyNo.place( x = 430, y = 330)
-
+#Creating the "Pregancy" label and assigning stylistic features
 BMILabel = Label(top, text = "What is your BMI?", background = 'light blue', font = font)
 BMILabel.place(x = 10, y = 390)
-
+#Assigning BMI variable
 varBMI = IntVar()
-
+#Creating the "BMI" buttons and assigning stylistic features
+#"Less than 23" button
 BMIless23 = Radiobutton(top, text = "Less than 23",  value = 4, variable = varBMI, background = 'light blue', font = font)
 BMIless23.place( x = 140, y = 390)
-
+#"23 - 29" button
 BMI23 = Radiobutton(top, text = "23 - 29",  value = 1, variable = varBMI, background = 'light blue', font = font)
 BMI23.place( x = 260, y = 390)
 
