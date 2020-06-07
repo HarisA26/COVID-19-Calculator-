@@ -94,19 +94,19 @@ BMI30.place( x = 340, y = 390)
 #"Over 40" button
 BMI40 = Radiobutton(top, text = "Over 40",  value = 3, variable = varBMI, background = 'light blue', font = font)
 BMI40.place( x = 420, y = 390)
-
+#Creating the "Vitamen D" drop down table and assigning stylistic features
 vitaminLabel = Label(top, text = "Vitamin D Levels?", background = 'light blue', font = font)
 vitaminLabel.place( x = 10, y = 450)
 
-
+#Assigning vitamin variable
 vitaminClick = StringVar()
 vitaminDrop = OptionMenu(top, vitaminClick, "Less than 30", "30-50", "Over 50")
 vitaminDrop.place(x = 150, y = 450)
-
+#Creating "Risk" label and adding stylistic features
 riskLabel = Label(top, text="Risk:", background='light blue', font=alertFont)
 riskLabel.place(x=150, y=510)
 
-
+#Creating the mathematics behind calculating the risk of user
 def calculateScore():
     score = 0
     gen = varGender.get()
