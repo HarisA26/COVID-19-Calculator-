@@ -52,7 +52,7 @@ healthNone.place( x = 220, y = 270)
 #"One" button
 healthOne = Radiobutton(top, text = "One",  value = 1, variable = varHealth, background = 'light blue', font = font)
 healthOne.place( x = 290, y = 270)
-
+#"Two" button
 healthTwo = Radiobutton(top, text = "Two",  value = 2, variable = varHealth, background = 'light blue', font = font)
 healthTwo.place( x = 350, y = 270)
 
