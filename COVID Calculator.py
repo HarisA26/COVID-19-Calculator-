@@ -45,7 +45,8 @@ healthLabel = Label(top, text = "Underlying health conditions?", background = 'l
 healthLabel.place(x = 10, y = 270)
 #Assigning health variable
 varHealth = IntVar()
-
+#Creating the "Health" buttons and assigning stylistic features
+#"None" button
 healthNone= Radiobutton(top, text = "None",  value = 4, variable = varHealth, background = 'light blue', font = font)
 healthNone.place( x = 220, y = 270)
 
