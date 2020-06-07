@@ -59,7 +59,7 @@ healthTwo.place( x = 350, y = 270)
 healthThree = Radiobutton(top, text = "Three or more",  value = 3, variable = varHealth, background = 'light blue',
                           font = font)
 healthThree.place( x = 220, y = 290)
-
+#Creating the "Pregancy" buttons and assigning stylistic features
 pregnancyLabel = Label(top, text = "Are you pregnant?", background = 'light blue', font = font)
 pregnancyLabel.place(x = 10, y = 330)
 
