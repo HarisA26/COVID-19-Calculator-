@@ -33,11 +33,11 @@ genderLabel = Label(top, text = "Gender", background = 'light blue', font = font
 genderLabel.place(x = 10, y = 210)
 #Assigning gender variable
 varGender = IntVar()
-#Creating the "Gender" buttons and assigning stylistic features
-#"Female" button
+#Creating the "Gender" radio buttons and assigning stylistic features
+#"Female" radio button
 female = Radiobutton(top, text = "Female",  value = 1, variable = varGender, background = 'light blue', font = font)
 female.place( x = 70, y = 210)
-#"Male" button
+#"Male" radio button
 male = Radiobutton(top, text = "Male",  value = 2, variable = varGender, background = 'light blue', font = font)
 male.place( x = 150, y = 210)
 #Creating the "Health" label and laying out its position on the GUI
@@ -45,17 +45,17 @@ healthLabel = Label(top, text = "Underlying health conditions?", background = 'l
 healthLabel.place(x = 10, y = 270)
 #Assigning health variable
 varHealth = IntVar()
-#Creating the "Health" buttons and assigning stylistic features
-#"None" button
+#Creating the "Health" radio buttons and assigning stylistic features
+#"None" radio button
 healthNone= Radiobutton(top, text = "None",  value = 4, variable = varHealth, background = 'light blue', font = font)
 healthNone.place( x = 220, y = 270)
-#"One" button
+#"One" radio button
 healthOne = Radiobutton(top, text = "One",  value = 1, variable = varHealth, background = 'light blue', font = font)
 healthOne.place( x = 290, y = 270)
-#"Two" button
+#"Two" radio button
 healthTwo = Radiobutton(top, text = "Two",  value = 2, variable = varHealth, background = 'light blue', font = font)
 healthTwo.place( x = 350, y = 270)
-#"Three or more" button 
+#"Three or more" radio button 
 healthThree = Radiobutton(top, text = "Three or more",  value = 3, variable = varHealth, background = 'light blue',
                           font = font)
 healthThree.place( x = 220, y = 290)
@@ -64,16 +64,16 @@ pregnancyLabel = Label(top, text = "Are you pregnant?", background = 'light blue
 pregnancyLabel.place(x = 10, y = 330)
 #Assigning pregnancy variable
 varPregnancy = IntVar()
-#Creating the "Pregancy" buttons and assigning stylistic features
-#"Under 28 weeks" button
+#Creating the "Pregancy" radio buttons and assigning stylistic features
+#"Under 28 weeks" radio button
 pregnancyUnder = Radiobutton(top, text = "Under 28 Weeks",  value = 1, variable = varPregnancy,
                              background = 'light blue', font = font)
 pregnancyUnder.place( x = 140, y = 330)
-#"Over 28 weeks" button
+#"Over 28 weeks" radio button
 pregnancyOver = Radiobutton(top, text = "Over 28 Weeks",  value = 2, variable = varPregnancy, background = 'light blue',
                             font = font)
 pregnancyOver.place( x = 290, y = 330)
-#"No" button
+#"No" radio button
 pregnancyNo = Radiobutton(top, text = "No",  value = 3, variable = varPregnancy, background = 'light blue', font = font)
 pregnancyNo.place( x = 430, y = 330)
 #Creating the "Pregancy" label and assigning stylistic features
@@ -81,27 +81,29 @@ BMILabel = Label(top, text = "What is your BMI?", background = 'light blue', fon
 BMILabel.place(x = 10, y = 390)
 #Assigning BMI variable
 varBMI = IntVar()
-#Creating the "BMI" buttons and assigning stylistic features
-#"Less than 23" button
+#Creating the "BMI" radio buttons and assigning stylistic features
+#"Less than 23" radio button
 BMIless23 = Radiobutton(top, text = "Less than 23",  value = 4, variable = varBMI, background = 'light blue', font = font)
 BMIless23.place( x = 140, y = 390)
-#"23 - 29" button
+#"23 - 29" radio button
 BMI23 = Radiobutton(top, text = "23 - 29",  value = 1, variable = varBMI, background = 'light blue', font = font)
 BMI23.place( x = 260, y = 390)
-#"30 - 39" button
+#"30 - 39" radio button
 BMI30 = Radiobutton(top, text = "30 - 39", value = 2, variable = varBMI, background = 'light blue', font = font)
 BMI30.place( x = 340, y = 390)
-#"Over 40" button
+#"Over 40" radio button
 BMI40 = Radiobutton(top, text = "Over 40",  value = 3, variable = varBMI, background = 'light blue', font = font)
 BMI40.place( x = 420, y = 390)
-#Creating the "Vitamen D" drop down table and assigning stylistic features
+#Creating the "Vitamin D" drop down table and assigning stylistic features
 vitaminLabel = Label(top, text = "Vitamin D Levels?", background = 'light blue', font = font)
 vitaminLabel.place( x = 10, y = 450)
 
 #Assigning vitamin variable
 vitaminClick = StringVar()
+#Creates a drop down menu for the Vitamin D variable
 vitaminDrop = OptionMenu(top, vitaminClick, "Less than 30", "30-50", "Over 50")
 vitaminDrop.place(x = 150, y = 450)
+
 #Creating "Risk" label and adding stylistic features
 riskLabel = Label(top, text="Risk:", background='light blue', font=alertFont)
 riskLabel.place(x=150, y=510)
@@ -182,12 +184,13 @@ alertLabel.place(x=250, y=510)
 #Function to execute when user presses button 
 def buttonPress():
     age = ageEntry.get()
-
+#Try-catch statement to make sure integer value inputed for age
     try:
         age = int(age)
     except ValueError:
         showerror('Non-Int Error', 'Please enter an integer value for age')
     else:
+      #This is the code that alerts user to what risk they have based on score and changes label colour accordingly
         if 8 >= calculateScore() >= 1:
             alertLabel["text"] = "Mild Risk"
             alertLabel["background"] = 'green'
@@ -197,7 +200,7 @@ def buttonPress():
         elif calculateScore() >= 12:
             alertLabel["text"] = "High Risk"
             alertLabel["background"] = 'red'
-        #message = messagebox.showinfo("Risk Score", risk)
+        
 
 
 
