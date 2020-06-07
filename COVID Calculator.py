@@ -33,7 +33,7 @@ genderLabel = Label(top, text = "Gender", background = 'light blue', font = font
 genderLabel.place(x = 10, y = 210)
 #Assigning gender variable
 varGender = IntVar()
-
+#Creating the "Gender" buttons and assigning stylistic features
 female = Radiobutton(top, text = "Female",  value = 1, variable = varGender, background = 'light blue', font = font)
 female.place( x = 70, y = 210)
 
