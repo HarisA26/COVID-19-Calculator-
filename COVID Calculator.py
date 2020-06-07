@@ -40,7 +40,7 @@ female.place( x = 70, y = 210)
 #"Male" button
 male = Radiobutton(top, text = "Male",  value = 2, variable = varGender, background = 'light blue', font = font)
 male.place( x = 150, y = 210)
-
+#Creating the "Health" label and laying out its position on the GUI
 healthLabel = Label(top, text = "Underlying health conditions?", background = 'light blue', font = font)
 healthLabel.place(x = 10, y = 270)
 
