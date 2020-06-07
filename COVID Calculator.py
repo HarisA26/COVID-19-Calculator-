@@ -37,7 +37,7 @@ varGender = IntVar()
 #"Female" button
 female = Radiobutton(top, text = "Female",  value = 1, variable = varGender, background = 'light blue', font = font)
 female.place( x = 70, y = 210)
-
+#"Male" button
 male = Radiobutton(top, text = "Male",  value = 2, variable = varGender, background = 'light blue', font = font)
 male.place( x = 150, y = 210)
 
